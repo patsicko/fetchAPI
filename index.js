@@ -22,10 +22,9 @@ let body=document.getElementById("body");
       
       const request = new Request("https://api.github.com/users");
 
-      fetch(request).then(Response=>Response.json()).then(data=>console.log(data));
-
-
-
+      fetch(request).then(response=>response.json()).then(data=>console.log(data)).catch(error=>{
+        console.log(error);
+      });
     }
 
 
